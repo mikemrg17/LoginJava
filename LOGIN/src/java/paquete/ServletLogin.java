@@ -19,19 +19,6 @@ public class ServletLogin extends HttpServlet {
         sesion.setAttribute("userName",id);
         response.setContentType("text/html;charset=UTF-8");
         
-        //Usango LoginBean
-        /*
-        LoginBean lb = new LoginBean();
-        // check to see if this user/password combination are valid
-        if(lb.validateUser(id,password))
-        {
-        response.sendRedirect("welcome");
-        }
-        else	// username/password not validated
-        {
-        response.sendRedirect("fail");
-        }*/
-        
         //Usando un consulta a la base de datos
         DBConnection conexion = new DBConnection();
         

@@ -19,7 +19,7 @@ public class DBConnection {
     
     public Boolean validateUser(String usernameToValidate, String passwordToValidate){
         String url = "jdbc:mysql://localhost:3306/users";
-        String username = "miguel";
+        String username = "root";
         String password = "1234";
         String sql = "SELECT * FROM user WHERE username='" + usernameToValidate + "' AND " + "password='" + passwordToValidate + "'";
         try{
