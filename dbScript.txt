@@ -1,0 +1,12 @@
+CREATE DATABASE users;
+
+USE users;
+
+CREATE TABLE user(
+id TINYINT NOT NULL AUTO_INCREMENT,
+username CHAR(30) NOT NULL,
+password CHAR(30) NOT NULL,
+PRIMARY KEY (id));
+
+INSERT INTO user (username, password) VALUES('ruben', 'rpv');
+INSERT INTO user (username, password) VALUES('administrator', 'admin');
