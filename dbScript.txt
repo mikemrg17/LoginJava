@@ -10,3 +10,5 @@ PRIMARY KEY (id));
 
 INSERT INTO user (username, password) VALUES('ruben', 'rpv');
 INSERT INTO user (username, password) VALUES('administrator', 'admin');
+
+GRANT ALL ON users.* TO admin@localhost IDENTIFIED BY '1234';
