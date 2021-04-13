@@ -19,9 +19,10 @@ public class DBConnection {
     
     public Boolean validateUser(String usernameToValidate, String passwordToValidate){
         String url = "jdbc:mysql://localhost:3306/users";
-        String username = "root";
+        String username = "miguel";
         String password = "1234";
-        String sql = "SELECT * FROM user WHERE username='" + usernameToValidate + "' AND " + "password='" + passwordToValidate + "'";
+        //String sql = "SELECT * FROM user WHERE username='" + usernameToValidate + "' AND " + "password='" + passwordToValidate + "'";
+        String sql = String.format("SELECT * FROM user WHERE username='%s' AND password='%s'", usernameToValidate, passwordToValidate);
         try{
             Class.forName("com.mysql.jdbc.Driver"); 
             Connection con = DriverManager.getConnection(url,username,password);
